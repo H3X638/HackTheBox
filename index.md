@@ -4,8 +4,8 @@ Hello, and welcome. Below you will the names to varrious boxes from HTB, the lin
 
 ### Boxes
 
+[Academy](https://h3x638.github.io/HackTheBox/academy)
+
 [Delivery](https://h3x638.github.io/HackTheBox/delivery)
 
 [Passage](https://h3x638.github.io/HackTheBox/passage)
-
-[Academy](https://h3x638.github.io/HackTheBox/Academy)
