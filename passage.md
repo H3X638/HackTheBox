@@ -1,5 +1,3 @@
-# HTB Passage
-
 ## Enumeration 
 
 ![CuteNews](/passage/images/CuteNews.png)
