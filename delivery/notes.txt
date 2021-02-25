@@ -1,0 +1,9 @@
+Nmap scan:
+
+Came up with ports 22, 80, and 8065
+
+Email: 4087638@delivery.htb
+
+Can create a ticket, once ticket is created you register as a new user and are provided with a link that brings you to a login page once in you are presented with multiple credentials, also there are posts that say if you get the hases you need to use has cat to get them
+
+Unkown creds: maildeliverer:Youve_G0t_Mail! 
