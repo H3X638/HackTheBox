@@ -1,9 +1,11 @@
-## Welcome to GitHub Pages
+## Welcome! 
 
-You can use the [editor on GitHub](https://github.com/H3X638/HackTheBox/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Hello, and welcome. Below you will the names to varrious boxes from HTB, the links will bring to writeups that ive done for each of the boxes. Feel free to take a look, maybe youll find something usefull. Happy hacking!
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-## Boxes
+### Boxes
 
 [Delivery](https://h3x638.github.io/HackTheBox/delivery)
+
+[Passage](https://h3x638.github.io/HackTheBox/passage)
+
+[Academy](https://h3x638.github.io/HackTheBox/Academy)
