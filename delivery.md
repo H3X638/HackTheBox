@@ -14,7 +14,7 @@ After enumerating maildeliverer I found that I was able to cat the mysql.conf fi
 
 ![SQL-Login](/delivery/images/sqllogin.png)
 
-##Root
+## Root
 
 Root was super simple, there was a hint eariler on the website that stated we shouldnt use RockYou and that if we got the hases we could use hashcat to get the password. I did just that, extracted the hash from the data base via mysql. And ran it through hash cat to get the password.
 
