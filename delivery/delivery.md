@@ -10,7 +10,7 @@ Ran an Nmap scan along with a gobuster scan. The gobuster scan didnt give me any
 
 After enumerating maildeliverer I found that I was able to cat the mysql.conf file that cointed the password for mysql. Once i had access to mysql I took a look at the databases and pull all the user information from it. 
 
-![SQL](/delivery/images/sqlsettings)
+![SQL](/delivery/images/sqlsettings.png)
 
 ![SQL-Login](/delivery/images/sqllogin.png)
 
