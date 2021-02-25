@@ -1,6 +1,6 @@
 # HTB Passage
 
-# Enumeration 
+## Enumeration 
 
 ![CuteNews](/passage/images/CuteNews.png)
 
@@ -8,7 +8,7 @@ Enumeration for the website was a bit odd. I wasnt avle to run any scans. The on
 
 ![Foothold](/passage/images/foothold.png)
 
-### Priv Esc. 
+## Priv Esc. 
 
 After poking around the box and getting nowhere. Decided to start enumeration of the website internally. Made my way to the users direcotry and started to input all the direcotries into the url. Finally came acros a direcotry that had a bunch of things encoded in base64. after trasfering the info over to cyberchef i found a user paul that matches up with the /etc/passwd user paul. Their login info was inside the info decoded in base 64 aswell.
 
@@ -16,7 +16,7 @@ After poking around the box and getting nowhere. Decided to start enumeration of
 ![lines](/passage/images/lines.png)
 ![Paul](/passage/images/paulspassword.png)
 
-#### Priv Esc. PT2
+## Priv Esc. PT2
 
 This was an absloute facepalm. It was sitting there in front of me the whole time. It turns out that paul and nadav share everthing. including ssh. During enumeration I took a peek at a hiddend ssh directory and saw that their was one key in authorized keys that belonged to  Nadav.  I took pauls private key and used ssh to log into is account from their I used ssh to loginto nadav, didnt require a password since they were known hosts. 
 
@@ -24,7 +24,7 @@ This was an absloute facepalm. It was sitting there in front of me the whole tim
 ![SSH Paul](/passage/images/paulssh.png)
 ![SSH Nadav](/passage/images/nadav.png)
 
-##### Root
+## Root
 
 Root was a brain buster. The whole box seems to be based around ssh. Long story short used dbus to create or copy a rsa key over from the root dircotry. Was then able to login as root with no password. I learned some new stuff from this box that I will be keeping in my back pocket, enumeration is alwyas key. overall very fun box. 
 
