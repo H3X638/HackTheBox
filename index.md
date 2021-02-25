@@ -6,4 +6,4 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ## Boxes
 
-[https://h3x638.github.io/HackTheBox/delivery](Delivery)
+[Delivery](https://h3x638.github.io/HackTheBox/delivery)
