@@ -1,3 +1,8 @@
+
+layout: page
+title: "HTB Passage"
+permalink: /passage/
+
 # Enumeration 
 
 ![CuteNews](/passage/images/CuteNews.png)
