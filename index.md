@@ -14,4 +14,4 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 
 [Ready](https://h3x638.github.io/HackTheBox/ready)
 
-[Time](https://h3x638.github.io/HackTheBox/Time)
+[Time](https://h3x638.github.io/HackTheBox/time)
