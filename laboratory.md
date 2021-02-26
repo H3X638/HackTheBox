@@ -25,7 +25,7 @@ once I sent a curl request with my cookie to the website my reverse shell was ac
 
 ## User
 
-![Dexter](/laboratory/imagesdexterlogin.png)
+![Dexter](/laboratory/images/dexterlogin.png)
 
 Once logined as Dexter I enumerated his account and found a private shh key, I was able to login as him and obtain the user flag.
 
