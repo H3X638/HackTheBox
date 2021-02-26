@@ -10,10 +10,14 @@ I found that getting user was a fun learning experience. It renforced various sk
 
 ## User
 
-Leading off of what I previous said I let up a lister on the port depicted in the picture below. Once I ran the exploit it created a new project in the database containg a malicious payload. Once that went through I successfull generated a reverse shell. After some quick enumeration I leared that I was already "user" I grabbed the flag and continued my enumeration. I saw a directory called root password, but nothing is every that easy. Will update this writeup once I succesfully root the machine.
+Leading off of what I previous said I let up a lister on the port depicted in the picture below. Once I ran the exploit it created a new project in the database containg a malicious payload. Once that went through I successfull generated a reverse shell. After some quick enumeration I leared that I was already "user" I grabbed the flag and continued my enumeration. I saw a directory called root password, but nothing is every that easy.
 
 ![User](/ready/images/user.png)
 
 ![Stable Shell](/ready/images/stableshell.png)
 
+## Root
 
+Root was realtivly easy, learned about escaping a docker. Turns out that I had root password the whole time, through my enumeration I came accrous while grepping through some config files, but I didnt think much of it untill I gave the box a break and came back to it. After logging in as root I attempted to find the root flag but it wasnt in the root directory. I found this odd, so after a bit of digging around on google I came to the conclusion that I needed to escape the enviorment that I was in. 
+
+![Docker](/ready/images/dockerescape.png)
