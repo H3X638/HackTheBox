@@ -30,3 +30,9 @@ once I sent a curl request with my cookie to the website my reverse shell was ac
 Once logined as Dexter I enumerated his account and found a private shh key, I was able to login as him and obtain the user flag.
 
 ![User](/laboratory/images/user.png)
+
+## Root
+
+Root was easy compared to the rest of the box, I leared about path hyjacking during this process. Im deffiently going to have to come back and re visit this box in the future. I fell that there still is more that I can learn from this box. Overall was a fun and challenging learning experience. 
+
+![Root](/laboratory/images/path.png)
