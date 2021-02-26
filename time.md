@@ -4,7 +4,11 @@
 
 ## Foothold
 
-First that that poped into my head when I first visitied the site was ill the exploit has to do with lack of santization and some malicious code. After trying various inputs I managed to get an error. "Validation failed: Unhandled Java exception: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'dsadsa': was expecting ('true', 'false' or 'null')". Took a bit of googling but I found a few CVE's that possible could lead to RCE, now I just needed to find and exploit or something explaing how to utilze this vulerability. Seaching for CVE-2019-12384 lead me to a github page with a possible way to exploit the target. The repo had some usefull links, even a demonstartion on how to set everything up.
+First that that poped into my head when I first visitied the site was ill the exploit has to do with lack of santization and some malicious code. After trying various inputs I managed to get an error. 
+
+"Validation failed: Unhandled Java exception: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'dsadsa': was expecting ('true', 'false' or 'null')". 
+
+Took a bit of googling but I found a few CVE's that possible could lead to RCE, now I just needed to find and exploit or something explaing how to utilze this vulerability. Seaching for CVE-2019-12384 lead me to a github page with a possible way to exploit the target. The repo had some usefull links, even a demonstartion on how to set everything up.
 
 ![CVE](/time/images/CVE.png)
 
