@@ -1,6 +1,3 @@
-### HTB Ready 
-
-
 ## Nmap 
 
 ![nampg](/ready/images/nmap.png)
