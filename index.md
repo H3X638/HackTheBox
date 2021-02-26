@@ -10,4 +10,6 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 
 [Passage](https://h3x638.github.io/HackTheBox/passage)
 
+[Laboratory](https://h3x638.github.io/HackTheBox/laboratory)
+
 [Ready](https://h3x638.github.io/HackTheBox/ready)
