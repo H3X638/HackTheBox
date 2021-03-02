@@ -4,7 +4,7 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 
 ### Boxes
 
-[Academy](https://h3x638.github.io/HackTheBox/academy) [Time](https://h3x638.github.io/HackTheBox/time)
+[Academy](https://h3x638.github.io/HackTheBox/academy)
 
 [Delivery](https://h3x638.github.io/HackTheBox/delivery)
 
