@@ -1,22 +1,24 @@
-# Foothold 
+## Foothold
 
-After running a few scans came accross a /register and /admin page. I wanted to see the reequest that was being sent when you register a new user, so i fired up Burp. I notied that I could modify a part of the request to bypass the login.
+After basic enumeration I managed to find two pages that stood out to me. I wasn't getting anywhere poking around the site, so I decided to fire up burp and monitor the request when registering a new user. After intercepting the request, I noticed that I was able to modify the request to bypass the login.
 
 ![Burp](/academy/images/burp.png)
 
-After forwarding a bunch of requests in burp I was able to login using the user that I created eariler, but I was logedin as the admin, there was a checklist of things that needed to be done and twoards the end of this list was a sub domain that I had to add to my /etc/hosts file. One I navigated to it I was greeted with a bunch of code and other directories.
+After forwarding a bunch of requests in burp I was able to login using the user that I created earlier, but instead of the other user, I was able to gain access as the admin. Once I was in I started poking around I noticed that there was a checklist of things that needed to be corrected. At the end of the list, I noticed there was a subdomain that I could access. After navigating to the subdomain the page was filled with tons of information that I needed to enumerate. 
 
 ![Academy](/academy/images/academylogin.png)
 
-After enumerating the webpage I found that Laravel was the service hosting everything. After trying to manually exploit it I moved on to metasploit. There was a single exploit that you could use to to get a reverse shell. 
+After enumerating the webpage I found that Laravel was the service hosting everything. After trying to manually exploit it I moved on to Metasploit. There was a single exploit that you could use to get a reverse shell.  
 
 ![metasploit](/academy/images/metasploit.png)
 
-This box requires heavy enumeration, I dint find linpeas to be all that helpful, the next users information ending being in an enviroment file in plain text
+## User/Root
+
+The user portion of this box required heavy enumeration. Moreover, I didn't find linpeas to be very helpful for this portion of the box. Information for the user ended up being in an environment file in plain text.
 
 ![User](/academy/images/user.png)
 
-After switching to this user again it required hevy enumeration to get to it. The infomartion I was looking for was in the audit direcotry inside an audit file, I have to say I came accross it by luck from trying different grep commands. After that I swited to the next user who had sudo permission for a command that alloud me to priv esc to root.
+The root portion of this box required some heavy enumeration as well. The information that I was seeking ended up being in an audit file. I feel like it was almost luck finding this information. After finding new credentials I switched to the next user who had sudo permissions allowing me to priv esc to root.
 
 ![Exploit](/academy/images/rootexploit.png)
 ![Root](/academy/images/root.png)
