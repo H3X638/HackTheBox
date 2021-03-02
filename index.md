@@ -14,4 +14,6 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 
 [Ready](https://h3x638.github.io/HackTheBox/ready)
 
+[ScriptKiddie](https://h3x638.github.io/HackTheBox/scriptkiddie)
+
 [Time](https://h3x638.github.io/HackTheBox/time)
