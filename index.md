@@ -16,4 +16,7 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 
 [ScriptKiddie](https://h3x638.github.io/HackTheBox/scriptkiddie)
 
+[TheNotebook](https://h3x638.github.io/HackTheBox/TheNotebook)
+
 [Time](https://h3x638.github.io/HackTheBox/time)
+
