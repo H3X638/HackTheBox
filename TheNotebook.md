@@ -33,4 +33,4 @@ Root didnt require much either. You had to escape a docker enviorment, ive done 
 
 ![exploit](/TheNotebook/images/exploit.png)
 
-![root](/TheNoteBook/images/root.png)
+![root](/TheNotebook/images/root.png)
