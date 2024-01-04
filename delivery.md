@@ -1,6 +1,8 @@
 # Foothold
 
-Ran a Nmap scan along with a gobuster scan. The gobuster scan didn't give me anything useful, the nmap scan showed that there was something running on a higher port. I decided to poke around the website, there were a few different links, one of them ended up bringing me to a help desk section where you could submit a ticket. My original thought was that I could upload a malicious attachment to my ticket, but that turned out to be a dead end. After further enumeration I came across a mattersmost login page, I remembered that in the source code of the page there was a section mentioning that once you register you'll get access to the website. I created a new user and register with a random email ending in @delivery.htb. Then submitted a help ticket requesting that my email be registered. After refreshing the page I was provided with a link to activate my account. Once I was inside, there were various post containing information about credentials. The first set of credentials I chose allowed me to ssh in as maildeliverer.
+I initiated a Nmap scan alongside a gobuster scan. While the gobuster results proved unfruitful, the Nmap scan revealed activity on a higher port. Intrigued, I explored the website, discovering several links, one of which led me to a help desk section where tickets could be submitted. Initially, I considered uploading a malicious attachment to my ticket but hit a dead end. Further enumeration led me to a Mattermost login page. Recalling a snippet in the page's source code suggesting access upon registration, I created a new user using a random email ending in @delivery.htb. I submitted a help ticket requesting email registration and, upon refreshing the page, received a link to activate my account.
+
+Once inside, I found numerous posts containing valuable information, including credentials. Opting for the first set of credentials, I successfully SSHed in as "maildeliverer."
 
 
 ![Registration.png](/delivery/images/registration.png)
@@ -9,7 +11,7 @@ Ran a Nmap scan along with a gobuster scan. The gobuster scan didn't give me any
 
 ## Priv Esc.
 
-After enumerating maildeliverer I found that I was able to cat the mysql.conf file that contained the password for mysql. Once i had access to mysql I took a look at the databases and was able to pull all the user information from it. 
+Upon enumerating "maildeliverer," I discovered the ability to access the "mysql.conf" file and retrieve the password for MySQL. With MySQL access secured, I delved into the databases, extracting comprehensive user information. 
 
 ![SQL](/delivery/images/sqlsettings.png)
 
@@ -17,6 +19,6 @@ After enumerating maildeliverer I found that I was able to cat the mysql.conf fi
 
 ## Root
 
-Root was super simple, there was a hint eariler on the website that stated we shouldnt use RockYou and that if we got the hases we could use hashcat to get the password. I extracted the hash from the data base via mysql. And ran it through hashcat to get the password.
+Rooting the system proved surprisingly straightforward. An earlier hint on the website cautioned against using RockYou and suggested utilizing hashcat if the hashes were obtained. Extracting the hash from the database through MySQL, I ran it through hashcat, successfully obtaining the password.
 
 ![Hashcat](/delivery/images/hashcat.png)
