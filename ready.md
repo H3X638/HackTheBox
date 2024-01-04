@@ -4,13 +4,17 @@
 
 ## Foothold
 
-I found that getting user was a fun learning experience. It reinforced various skills that I've used on previous boxes. I started off by navigating to the website that directed me to a login site, before beginning my research I fired up burp to see if I could just bypass the login page. But the site was not vulnerable to this. After some research, I found a public exploit for gitlab, after examing the code to gain a better understanding of the exploit. I created a new user and used burp to grab the cookie and authtoken from that session since it was needed in the exploit. In the photos, my ports will be different because I tried this exploit multiple times and took screenshots at different points, apologies.  
+Obtaining user access proved to be an enjoyable learning experience, reinforcing various skills acquired from previous boxes. I initiated the process by navigating to the website, which redirected me to a login page. In an attempt to expedite the process, I fired up Burp to check for potential login page bypass vulnerabilities, but the site proved resilient.
+
+After conducting research, I stumbled upon a public exploit for GitLab. Upon closer examination of the code to gain a comprehensive understanding, I created a new user. Using Burp, I captured the cookie and auth token from this session, as they were essential for the exploit. Please note that the port numbers may differ in the screenshots due to multiple attempts at the exploit. Apologies for any confusion.
 
 ![Exploit](/ready/images/exploit.png)
 
 ## User
 
-Leading off of what I previously said I let up a lister on the port depicted in the picture below. Once I ran the exploit it created a new project in the database containing a malicious payload. Once that went through I successfully generated a reverse shell. After some quick enumeration I learned that I was already "user" I grabbed the flag and continued my enumeration. I saw a directory called root password, but nothing is ever that easy.
+Building on my earlier steps, I set up a listener on the port depicted in the picture below. Executing the exploit resulted in the creation of a new project in the database, housing a malicious payload. This successful execution led to the generation of a reverse shell. A brief round of enumeration revealed that I already had access as the "user." I swiftly retrieved the flag and continued exploring.
+
+Encountering a directory named "root password," I knew that things are rarely as straightforward as they seem.
 
 ![User](/ready/images/user.png)
 
@@ -18,6 +22,8 @@ Leading off of what I previously said I let up a lister on the port depicted in 
 
 ## Root
 
-Root was relatively easy, learned about escaping a docker. Turns out that I had root password the whole time, through my enumeration I came across while grepping through some config files, but I didn't think much of it until I gave the box a break and came back to it. After logging in as root I attempted to find the root flag, but it wasn't in the root directory. I found this odd, so after a bit of digging around on google, I came to the conclusion that I needed to escape the environment that I was in. 
+Root access turned out to be relatively straightforward as I learned about escaping a Docker environment. Interestingly, I had the root password all along, as I discovered during my enumeration by grepping through some config files. Initially, I didn't pay much attention to it, but after taking a break and returning to the box, it clicked.
+
+After logging in as root, I attempted to locate the root flag, but it wasn't in the root directory, which struck me as odd. A bit of research on Google led me to the conclusion that I needed to escape the environment I was in.
 
 ![Docker](/ready/images/dockerescape.png)
