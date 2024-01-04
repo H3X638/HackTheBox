@@ -4,28 +4,26 @@
 
 ## Foothold
 
-The first thing that popped into my head when I first visited the site was ill the exploit has to do with a lack of sanitization and some malicious code. After trying various inputs I managed to get an error. 
+Upon first visiting the site, my initial thought was that the exploit might involve a lack of sanitization and some malicious code. After experimenting with various inputs, I encountered an error message: "Validation failed: Unhandled Java exception: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'dsadsa': was expecting ('true', 'false' or 'null')."
 
-"Validation failed: Unhandled Java exception: com.fasterxml.jackson.core.JsonParseException: Unrecognized token 'dsadsa': was expecting ('true', 'false' or 'null')". 
-
-Took a bit of googling but I found a few CVE's that possible could lead to RCE, now I just needed to find and exploit or something explaining how to utilize this vulnerability. Searching for CVE-2019-12384 lead me to a GitHub page with a possible way to exploit the target. The repo had some useful links, even a demonstration on how to set everything up.
+A bit of googling led me to several CVEs that could potentially lead to Remote Code Execution (RCE). Now, the task was to find an exploit or some documentation explaining how to leverage this vulnerability. My search for CVE-2019-12384 led me to a GitHub page with a potential method to exploit the target. The repository contained useful links and even a demonstration on how to set everything up.
 
 ![CVE](/time/images/CVE.png)
 
-If everything worked properly I should be able to get RCE from this. I noted that they were demonstrating how to use the exploit locally, so I had to do a few modifications to the payloads for it to work properly. For this, to work I had to serve up a malicious file that would give me a reverse shell when its executed.  
+If everything worked as intended, I should be able to achieve Remote Code Execution (RCE) through this exploit. Noting that the demonstration was for local use, I made a few modifications to the payloads to make them suitable for remote exploitation. To make this work, I had to serve a malicious file that would provide me with a reverse shell when executed. 
 
 ![Payload](/time/images/payload.png)
 ![malicious](/time/images/malcious.png)
 
 ## User
 
-once the payload was crafted I went back to the main website and pasted the payload into the validator, and clicked on validate. Once the request went through I had a reverse shell. Didn't need to do much enumeration for this box. Once I was in I was already the user.  
+Once the payload was crafted, I returned to the main website, pasted the payload into the validator, and clicked on validate. As soon as the request went through,I gained  a reverse shell. Minimal enumeration was needed for this box, as upon entry, I already had the user access. 
 
 ![User](/time/images/payload.png)
 
 ## Root
 
-Root was super easy aswell, I could write to a file that was run frequently as root. So I added my public key to known hosts and used ssh to login as root. 
+Gaining root access turned out to be straightforward as well. I identified a file that was run frequently as root, and since I had the ability to write to it, I added my public key to the known hosts. Utilizing SSH, I logged in as root, securing the root access effortlessly.
 
 ![Root](/time/images/root.png)
 
