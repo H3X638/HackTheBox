@@ -1,6 +1,6 @@
 ## Welcome! 
 
-Hello, and welcome. Below you will find the names of varrious boxes from HTB, the links will bring to writeups that ive done on the boxes. Feel free to take a look, maybe youll find something usefull. Happy hacking!
+Welcome to my HTB Writeup Collection! Dive into my blog to explore detailed write-ups on various HTB challenege boxes.
 
 ### Boxes
 
@@ -19,4 +19,3 @@ Hello, and welcome. Below you will find the names of varrious boxes from HTB, th
 [TheNotebook](https://h3x638.github.io/HackTheBox/TheNotebook)
 
 [Time](https://h3x638.github.io/HackTheBox/time)
-
